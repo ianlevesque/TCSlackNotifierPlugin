@@ -5,3 +5,7 @@ build/
 .idea/
 out/
 .gradletasknamecache
+/bin/
+.classpath
+.project
+.settings
