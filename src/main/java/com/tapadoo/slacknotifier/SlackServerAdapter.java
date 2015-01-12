@@ -134,7 +134,7 @@ public class SlackServerAdapter extends BuildServerAdapter {
 
     private String messageFor(SRunningBuild build) {
         String statusString = build.getBuildStatus().isSuccessful() ? "succeeded.": "failed!";
-        return String.format("[%s] Build %s (<%s|build log>)", build.getFullName(), statusString, linkToBuildLog(build));
+        return String.format("[%s] <%s|Build %s> (%s) %s", build.getFullName(), linkToBuildLog(build), build.getBuildNumber(), build.getBranch().getDisplayName(), statusString);
     }
 
     private SlackProjectSettings getSlackSettings(SRunningBuild  build) {
